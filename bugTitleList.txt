@@ -1,0 +1,1 @@
+262791 Bugzilla – Activity log for bug 262791: Compilation slow when APT is enabled

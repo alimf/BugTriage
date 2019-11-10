@@ -1,0 +1,352 @@
+<bugs>
+    <bug>
+        <bug_id>262791</bug_id>
+        <title>262791 – Compilation slow when APT is enabled</title>
+        <product>JDT</product>
+        <component>APT (&lt;a href="buglist.cgi?component=APT&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Walter Harley</assignee>
+    </bug>
+    <bug>
+        <bug_id>262605</bug_id>
+        <title>262605 – [content assist] ANONYMOUS_CLASS_DECLARATION proposal should support TYPE_REF as required proposals</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>263037</bug_id>
+        <title>263037 – [content assist] Filtering broken for constructor proposals if there are chars after the caret</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>266931</bug_id>
+        <title>266931 – [surround with] quick menu shows too many entries for word in Javadoc</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>287136</bug_id>
+        <title>287136 – [quick fix][api] Make ASTRewriteCorrectionProposal and parents public API</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Deepak Azad</assignee>
+    </bug>
+    <bug>
+        <bug_id>294970</bug_id>
+        <title>294970 – In strings use the name/label when there is just one element/thing</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Deepak Azad</assignee>
+    </bug>
+    <bug>
+        <bug_id>297899</bug_id>
+        <title>297899 – Stepping key-bindings get ignored the first time they are pressed</title>
+        <product>JDT</product>
+        <component>Debug (&lt;a href="buglist.cgi?component=Debug&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>JDT-Debug-Inbox</assignee>
+    </bug>
+    <bug>
+        <bug_id>283427</bug_id>
+        <title>283427 – [refactoring] [api] RefactoringWizardOpenOperation/RefactoringWizard should have a way to use a specified IRunnableContext</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>296794</bug_id>
+        <title>296794 – [ltk] DocumentChange fails if document is not thread safe</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>297566</bug_id>
+        <title>297566 – [clean up] StackOverflow in callsWrittingConstructor of VariableDeclarationFinder in VariableDeclarationFix on Save</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>260865</bug_id>
+        <title>260865 – [compare] Clicking on the structure view breaks the compare editor viewers</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Tomasz Zarna</assignee>
+    </bug>
+    <bug>
+        <bug_id>298603</bug_id>
+        <title>298603 – [JUnit] Add a filter for ignored tests</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Andrej Zachar</assignee>
+    </bug>
+    <bug>
+        <bug_id>264606</bug_id>
+        <title>264606 – [extract method] extracting return value results in compile error</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Benjamin Muskalla</assignee>
+    </bug>
+    <bug>
+        <bug_id>271700</bug_id>
+        <title>271700 – testDeclaringTypes failing in nightly build</title>
+        <product>JDT</product>
+        <component>Debug (&lt;a href="buglist.cgi?component=Debug&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Samantha Chan</assignee>
+    </bug>
+    <bug>
+        <bug_id>260621</bug_id>
+        <title>260621 – Chkpii error in N20090109-2000</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>260694</bug_id>
+        <title>260694 – [compare] NPE in log when opening Java compare editor with breadcrumbs enabled</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>260992</bug_id>
+        <title>260992 – [clean up] Improper enhanced for-loop conversion on descendingIterator()</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>261352</bug_id>
+        <title>261352 – [content assist][5.0] constructor completion for generics fails</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>261374</bug_id>
+        <title>261374 – [content assist] Constructor proposal does not replace prefix</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>261479</bug_id>
+        <title>261479 – [content assist] Constructor completion has problems with selected text</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>261538</bug_id>
+        <title>261538 – [hovering] Problem hover blocks the UI thread</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>262909</bug_id>
+        <title>262909 – Illegal argument exception in AssistContext.getASTRoot</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>263916</bug_id>
+        <title>263916 – [content assist] Auto completion of innerclasses does not work as expected</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>264136</bug_id>
+        <title>264136 – [content assist] applying anonymous type proposal: Linked Editor selection is too big</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>264747</bug_id>
+        <title>264747 – [navigation] Quick outline auto scrolling does not work in cocoa</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>264999</bug_id>
+        <title>264999 – [open type] Does not make matching range bold if pattern ends with &amp;lt; or space</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>265197</bug_id>
+        <title>265197 – [misc] static final String member with specific content truncated in hover tooltip</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>265789</bug_id>
+        <title>265789 – [preferences] Java Editor one of project properties shouldn't show Restore Defaults/Apply buttons.</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>266085</bug_id>
+        <title>266085 – [navigation] Quick outline view reproduces StackOverflow on certain key presses (to filter)</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>267237</bug_id>
+        <title>267237 – [clean up] CleanUpPerfTest fails with AFE in AbstractCleanUp.setOptions()</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>267368</bug_id>
+        <title>267368 – [navigation] Open Implementation hyperlink should not open type hierarchy on caret location</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>272291</bug_id>
+        <title>272291 – [compare] 'Compare With' menu entries not intuitive</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>272354</bug_id>
+        <title>272354 – [JUnit] NPE while initializing Java tooling</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>272742</bug_id>
+        <title>272742 – ImagesOnFileSystemRegistry is not thread safe</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>273440</bug_id>
+        <title>273440 – [implementation] NPE from Java editor</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>278802</bug_id>
+        <title>278802 – rename 'Hierarchy' view to 'Type Hierarchy' view</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>278968</bug_id>
+        <title>278968 – Remove org.eclipse.jdt.ui.examples.projects</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>279521</bug_id>
+        <title>279521 – [junit] Wrong message when selecting a project in the JUnit dialog</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>280123</bug_id>
+        <title>280123 – [typing] BadLocationException when pasting word "default" outside of class</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>280245</bug_id>
+        <title>280245 – [nls tooling] Properties file editor screws selection on double-click</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>285871</bug_id>
+        <title>285871 – Simplify 'Layout' view menus</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>287947</bug_id>
+        <title>287947 – [navigation] Open Implementation should operate on selected method, not enclosing</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>288121</bug_id>
+        <title>288121 – [perfs] Comments applied for performance tests are obsolete</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>288143</bug_id>
+        <title>288143 – [perfs] Comments applied for performance tests may be obsolete</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>288242</bug_id>
+        <title>288242 – [content assist] Each completion proposal computer should be able to configure the shared context</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>288385</bug_id>
+        <title>288385 – [clean up] Internal error with configured profiles from multiple projects</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>289152</bug_id>
+        <title>289152 – [implementation] Class cast exception from editor while getting content from CVS</title>
+        <product>JDT</product>
+        <component>Text (&lt;a href="buglist.cgi?component=Text&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>291996</bug_id>
+        <title>291996 – [compare] Invalid thread access from JavaMergeViewer during extracting method</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>292806</bug_id>
+        <title>292806 – ClassCastException From JavaTaskListAdapter</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+    <bug>
+        <bug_id>292903</bug_id>
+        <title>292903 – [quick fix] NPE for quick fix on array fields</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Dani Megert</assignee>
+    </bug>
+</bugs>
