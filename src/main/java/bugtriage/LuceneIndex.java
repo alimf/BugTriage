@@ -35,11 +35,9 @@ public class LuceneIndex {
             DocumentBuilder db = dbf.newDocumentBuilder();
             org.w3c.dom.Document doc = db.parse(file);
             doc.getDocumentElement().normalize();
-            System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
             NodeList nodeList = doc.getElementsByTagName("bug");
             for (int itr = 0; itr < nodeList.getLength(); itr++) {
                 Node node = nodeList.item(itr);
-                System.out.println("\nNode Name :" + node.getNodeName());
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) node;
 
@@ -49,7 +47,6 @@ public class LuceneIndex {
                     indexDoc.add(new TextField("product", eElement.getElementsByTagName("product").item(0).getTextContent(), Field.Store.YES));
                     indexDoc.add(new TextField("component", eElement.getElementsByTagName("component").item(0).getTextContent(), Field.Store.YES));
                     indexDoc.add(new TextField("assignee", eElement.getElementsByTagName("assignee").item(0).getTextContent(), Field.Store.YES));
-                    System.out.println(indexDoc);
                     w.addDocument(indexDoc);
                 }
             }
