@@ -42,11 +42,6 @@ public class LuceneIndex {
                 System.out.println("\nNode Name :" + node.getNodeName());
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) node;
-                    System.out.println("Student id: " + eElement.getElementsByTagName("bug_id").item(0).getTextContent());
-                    System.out.println("First Name: " + eElement.getElementsByTagName("title").item(0).getTextContent());
-                    System.out.println("Last Name: " + eElement.getElementsByTagName("product").item(0).getTextContent());
-                    System.out.println("Subject: " + eElement.getElementsByTagName("component").item(0).getTextContent());
-                    System.out.println("Marks: " + eElement.getElementsByTagName("assignee").item(0).getTextContent());
 
                     Document indexDoc = new Document();
                     indexDoc.add(new StringField("bugId", eElement.getElementsByTagName("bug_id").item(0).getTextContent(), Field.Store.YES));
