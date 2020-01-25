@@ -2,6 +2,7 @@ package bugtriage;
 
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
+import org.jsoup.helper.StringUtil;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.w3c.dom.Element;
@@ -21,19 +22,29 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 public class BugHistoryFetcher {
-    static org.w3c.dom.Document dom;
+    static Map<String, org.w3c.dom.Document> stringDocumentMap = new HashMap<>();
+    static String BUG_ROOT_PATH = "bugs";
+    static String NODE_NAME_BUG_ID = "bug_id";
+    static String NODE_NAME_TITLE = "title";
+    static String NODE_NAME_PRODUCT = "product";
+    static String NODE_NAME_COMPONENT = "component";
+    static String NODE_NAME_ASSIGNEE = "assignee";
+    static String ALL_PRODUCTS_LIST = "allProducts";
 
-    public static void main(String[] args) throws IOException, TransformerException, ParserConfigurationException {
+    public static void main(String[] args) {
 
         BugHistoryFetcher test = new BugHistoryFetcher();
         test.formatXmlFile();
-        test.writeXMLFile(dom, "bug-list.xml");
+        if (stringDocumentMap.isEmpty()) {
+            return;
+        }
+        stringDocumentMap.forEach((key, value) -> test.writeXMLFile(value, key + "-" + "bug-list.xml"));
+
+
 //        test.writeBugTitlesToFile("bugTitleList.txt");
 //
 //        test.getAllBugTitles("bugTitleList.txt").forEach(System.out::println);
@@ -54,19 +65,22 @@ public class BugHistoryFetcher {
     private List<String> getAllBugsTitlesByIds(List<String> bugIds) throws IOException {
         List<String> titles = new ArrayList<>();
         bugIds.forEach(bugId -> {
-            titles.add(bugId + " "+ getBugTitleByBugId(bugId));
+            titles.add(bugId + " " + getBugTitleByBugId(bugId));
         });
         return titles;
     }
 
-    private ArrayList<String> readBugIDs() throws IOException {
-        String bugData = FileUtils.readFileToString(new File("bugIDList.txt"));
-        String[] bugs = bugData.split("\n");
-
-        System.out.println(bugs.length);
-
-        ArrayList<String> idList = new ArrayList<>(Arrays.asList(bugs));
-        return idList;
+    private List<String> readBugIDs() {
+        String bugData;
+        try {
+            bugData = FileUtils.readFileToString(new File("bugIDList.txt"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        if (!StringUtil.isBlank(bugData)) {
+            return Arrays.asList(bugData.split("\n"));
+        }
+        return Collections.emptyList();
     }
 
     private String getBugTitleByBugId(String bugId) {
@@ -82,83 +96,118 @@ public class BugHistoryFetcher {
     }
 
 
-    private List<String> getAllBugTitles(String pathName) {
-        try {
-            return Files.readAllLines(Paths.get(pathName));
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return new ArrayList<>();
-    }
-
-
-    public void writeXMLFile(org.w3c.dom.Document doc, String fileName) throws TransformerException {
-
+    public void writeXMLFile(org.w3c.dom.Document doc, String fileName) {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-        DOMSource source = new DOMSource(doc);
-        StreamResult result = new StreamResult(new File(fileName));
-        configureTransformer(transformer);
-        transformer.transform(source, result);
-
+        try {
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource source = new DOMSource(doc);
+            StreamResult result = new StreamResult(new File(BUG_ROOT_PATH + File.separator + fileName));
+            configureTransformer(transformer);
+            transformer.transform(source, result);
+        } catch (TransformerException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("File saved!");
     }
 
-    /**
-     * Configure XML transformer for indentation
-     *
-     * @param transformer xml Transformer from {@link #printXMLtoConsole(org.w3c.dom.Document)} and {@link #writeXMLFile(org.w3c.dom.Document, String)}
-     */
     private void configureTransformer(Transformer transformer) {
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
         transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
     }
 
-    public void formatXmlFile() throws ParserConfigurationException, IOException {
+    public void formatXmlFile() {
 
-        ArrayList<String> bugs = readBugIDs();
-
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        DocumentBuilder db = dbf.newDocumentBuilder();
-        dom = db.newDocument();
-        Element rootEle = dom.createElement("bugs");
-        dom.appendChild(rootEle);
-
-
-        for (int i = 0; i < bugs.size(); i++) {
-            //System.out.println(((Element) bugs.item(i)).getElementsByTagName("bug_id").item(0).getTextContent());
-            System.out.println("Current bug: " + bugs.get(i));
-            Document doc = Jsoup.connect("https://bugs.eclipse.org/bugs/show_bug.cgi?id=" + bugs.get(i)).timeout(10 * 1000).get();
-            System.out.println(doc.toString());
-            //	Document doc = Jsoup.connect("https://netbeans.org/bugzilla/show_activity.cgi?id=" + bugs.get(i)).timeout(10 * 1000).get();
-//			Elements newsHeadlines = doc.select("html body #bugzilla-body table tbody tr");
-            String bugTitle = doc.select("html title").html();
-            String bugProduct = doc.select("html body #bugzilla-body table tbody tr td #field_container_product").html();
-            String bugComponent = doc.select("html body #bugzilla-body table tbody tr td #field_container_component").html();
-            String bugAssginee = doc.select("html body #bugzilla-body table tbody tr td #field_label_assigned_to").next().select("span span").html();
-//
-            Element bug = dom.createElement("bug");
-            Element id = dom.createElement("bug_id");
-            Element title = dom.createElement("title");
-            Element product = dom.createElement("product");
-            Element component = dom.createElement("component");
-            Element assignee = dom.createElement("assignee");
-
-            (id).appendChild(dom.createTextNode(bugs.get(i)));
-            (bug).appendChild(id);
-            title.appendChild(dom.createTextNode(bugTitle));
-            product.appendChild(dom.createTextNode(bugProduct));
-            component.appendChild(dom.createTextNode(bugComponent));
-            assignee.appendChild(dom.createTextNode(bugAssginee));
-
-            bug.appendChild(title);
-            bug.appendChild(product);
-            bug.appendChild(component);
-            bug.appendChild(assignee);
-            rootEle.appendChild(bug);
+        List<String> bugIDs = readBugIDs();
+        if (bugIDs == null || bugIDs.isEmpty()) {
+            return;
         }
+        //System.out.println(((Element) bugs.item(i)).getElementsByTagName("bug_id").item(0).getTextContent());
+        bugIDs.forEach(bugId -> {
+            Map<String, String> bugData = fetchBugData(bugId);
+            appendChild(getProductWiseRootElement(ALL_PRODUCTS_LIST), bugData);
+            appendChild(getProductWiseRootElement(bugData.get(NODE_NAME_PRODUCT)), bugData);
+        });
+    }
+
+    public Map<String, String> fetchBugData(String bugId) {
+
+        Map<String, String> bugData = new HashMap<>();
+        System.out.println("Current bug: " + bugId);
+        Document doc = null;
+        try {
+            doc = Jsoup.connect("https://bugs.eclipse.org/bugs/show_bug.cgi?id=" + bugId).timeout(10 * 1000).get();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(doc.toString());
+        //	Document doc = Jsoup.connect("https://netbeans.org/bugzilla/show_activity.cgi?id=" + bugs.get(i)).timeout(10 * 1000).get();
+//			Elements newsHeadlines = doc.select("html body #bugzilla-body table tbody tr");
+        String bugTitle = doc.select("html title").html();
+        String bugProduct = doc.select("html body #bugzilla-body table tbody tr td #field_container_product").html();
+        String bugComponent = doc.select("html body #bugzilla-body table tbody tr td #field_container_component").html();
+        String bugAssignee = doc.select("html body #bugzilla-body table tbody tr td #field_label_assigned_to").next().select("span span").html();
+
+        bugData.put(NODE_NAME_BUG_ID, bugId);
+        bugData.put(NODE_NAME_TITLE, bugTitle);
+        bugData.put(NODE_NAME_PRODUCT, bugProduct);
+        bugData.put(NODE_NAME_COMPONENT, bugComponent);
+        bugData.put(NODE_NAME_ASSIGNEE, bugAssignee);
+
+        return bugData;
+    }
+
+    private void appendChild(org.w3c.dom.Document document, Map<String, String> data) {
+        Element rootElement = document.getDocumentElement();
+        Element bug = document.createElement("bug");
+        Element id = document.createElement("bug_id");
+        Element title = document.createElement("title");
+        Element product = document.createElement("product");
+        Element component = document.createElement("component");
+        Element assignee = document.createElement("assignee");
+
+        (id).appendChild(document.createTextNode(data.get(NODE_NAME_BUG_ID)));
+        (bug).appendChild(id);
+        title.appendChild(document.createTextNode(data.get(NODE_NAME_TITLE)));
+        product.appendChild(document.createTextNode(data.get(NODE_NAME_PRODUCT)));
+        component.appendChild(document.createTextNode(data.get(NODE_NAME_COMPONENT)));
+        assignee.appendChild(document.createTextNode(data.get(NODE_NAME_ASSIGNEE)));
+
+        bug.appendChild(title);
+        bug.appendChild(product);
+        bug.appendChild(component);
+        bug.appendChild(assignee);
+        rootElement.appendChild(bug);
+    }
+
+    private org.w3c.dom.Document getProductWiseRootElement(String product) {
+        if (stringDocumentMap == null) {
+            stringDocumentMap = new HashMap<>();
+        }
+        if (stringDocumentMap.isEmpty()) {
+            stringDocumentMap.put(ALL_PRODUCTS_LIST, createDocument());
+        }
+        org.w3c.dom.Document document = stringDocumentMap.get(product);
+        if (document == null) {
+            document = createDocument();
+            stringDocumentMap.put(product, document);
+            return document;
+        }
+        return document;
+    }
+
+    private org.w3c.dom.Document createDocument() {
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db;
+        try {
+            db = dbf.newDocumentBuilder();
+        } catch (ParserConfigurationException e) {
+            throw new RuntimeException(e);
+        }
+        org.w3c.dom.Document document = db.newDocument();
+        Element rootElement = document.createElement("bugs");
+        document.appendChild(rootElement);
+        return document;
     }
 
 }

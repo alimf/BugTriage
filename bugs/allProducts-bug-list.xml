@@ -1,0 +1,86 @@
+<bugs>
+    <bug>
+        <bug_id>314817</bug_id>
+        <title>314817 – Redo screenshot: /org.eclipse.jdt.doc.user/whatsNew/images/instance-counts.png</title>
+        <product>JDT</product>
+        <component>Debug (&lt;a href="buglist.cgi?component=Debug&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>315909</bug_id>
+        <title>315909 – [extract constant][quick assist] Extract to constant should be available anywhere in a string/number</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>317755</bug_id>
+        <title>317755 – [JUnit] JUnit -&amp;gt; Activate on Error/Failure Only not working</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>318010</bug_id>
+        <title>318010 – [preferences] Add options for new FORMATTER_INSERT_NEW_LINE_AFTER_ANNOTATION_ON_* constants</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>318609</bug_id>
+        <title>318609 – [extract method] Doesn't consider enum type as static</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>319054</bug_id>
+        <title>319054 – Eclipse deletes all files when I cancel a project creation (symlink in project location path)</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>319069</bug_id>
+        <title>319069 – [move member type] Convert to top level looses literal initializers when changing visibility</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>319860</bug_id>
+        <title>319860 – [organize imports] Unused import added for reference to nested type from Javadoc</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>322543</bug_id>
+        <title>322543 – [clean up] Stops working after 100 problems in one CU</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>323134</bug_id>
+        <title>323134 – [JUnit] JUnit view loses several action states on restart</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>324285</bug_id>
+        <title>324285 – [JUnit] RemoteTestRunnerClient destroys line delimiters</title>
+        <product>JDT</product>
+        <component>UI (&lt;a href="buglist.cgi?component=UI&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+    <bug>
+        <bug_id>324987</bug_id>
+        <title>324987 – [formatter] API compatibility problem with Annotation Newline options</title>
+        <product>JDT</product>
+        <component>Core (&lt;a href="buglist.cgi?component=Core&amp;amp;product=JDT&amp;amp;bug_status=__open__" target="_blank"&gt;show other bugs&lt;/a&gt;)</component>
+        <assignee>Markus Keller</assignee>
+    </bug>
+</bugs>
